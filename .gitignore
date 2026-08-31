@@ -1,0 +1,56 @@
+# ── التبعيات والبناء ───────────────────────────────────────────────
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# ── الأسرار والإعدادات المحلية ─────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+api-token
+_clients.txt
+clients.txt
+
+# ── حالة أداة acp داخل المشروع (تحتوي محتوى مشاريع حقيقية) ────────
+.acp-sessions/
+.acp-worktrees/
+.acp-images/
+.acp-lessons.md
+.acp-map.md
+.acp-fingerprint.json
+.acp-verify
+.acp/
+
+# ── مخرجات تشغيل حقيقية (مسارات محلية + نصوص مهام) ────────────────
+scripts/session.json
+scripts/last-session.html
+scripts/last-fanout.html
+*-session.html
+*-fanout.html
+replay-*.html
+
+# ── قواعد بيانات وسجلات محلية ─────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+*.log
+logs/
+ledger.json
+usage.json
+
+# ── ملفات المحرر والنظام ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ── مؤقتات الاختبار ───────────────────────────────────────────────
+test-results/
+.vitest/
+tmp/

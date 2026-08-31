@@ -1,0 +1,65 @@
+{
+  "name": "antigravity-acp",
+  "version": "1.0.0",
+  "description": "Professional Agent Client Protocol (ACP) adapter that drives the Google Antigravity CLI (agy) as a coding sub-agent, running on Gemini 3.6 Flash.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "acp": "dist/cli.js",
+    "antigravity-acp": "dist/index.js",
+    "antigravity-delegate": "dist/delegate.js",
+    "antigravity-capacity": "dist/capacity.js",
+    "antigravity-fanout": "dist/fanout.js",
+    "antigravity-swarm": "dist/swarm.js",
+    "antigravity-pro": "dist/pro.js",
+    "antigravity-init": "dist/init.js",
+    "antigravity-feedback": "dist/feedback-cli.js",
+    "antigravity-stats": "dist/stats-cli.js",
+    "antigravity-rollback": "dist/rollback-cli.js",
+    "antigravity-account": "dist/account-cli.js",
+    "antigravity-api": "dist/api-cli.js",
+    "antigravity-web": "dist/web-cli.js",
+    "antigravity-qwen": "dist/qwen-cli.js",
+    "antigravity-monitor": "dist/monitor.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node dist/smoke-client.js",
+    "smoke:dev": "tsx src/smoke-client.ts",
+    "delegate": "node dist/delegate.js",
+    "capacity": "node dist/capacity.js",
+    "fanout": "node dist/fanout.js",
+    "pro": "node dist/pro.js",
+    "swarm": "node dist/swarm.js",
+    "init": "node dist/init.js",
+    "feedback": "node dist/feedback-cli.js",
+    "stats": "node dist/stats-cli.js",
+    "account": "node dist/account-cli.js",
+    "monitor": "node dist/monitor.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "dependencies": {
+    "@agentclientprotocol/sdk": "^0.25.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "playwright": "^1.45.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
